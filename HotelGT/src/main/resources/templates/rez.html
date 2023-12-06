@@ -7,116 +7,58 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
-<body>
-<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+<body class="rezHtml">
+<form action="#" th:action="@{/rez}" method="post" th:object="${hotelReservation}">
+    <div class="reservationPage">
+        <div class="formReservation">
+            <div class="mb-3">
+                <label for="dateIn" class="form-label">Data intrare</label>
+                <input type="date" th:field="*{dateIn}" class="form-control" id="dateIn">
+                <div id="dateInHelp" class="form-text">Alege ziua de check-in</div>
+            </div>
+            <div class="mb-3">
+                <label for="dateOut" class="form-label">Data iesire</label>
+                <input type="date" th:field="*{dateOut}" class="form-control" id="dateOut">
+                <div id="dateOutHelp" class="form-text">Alege ziua de check-out</div>
+            </div>
+            <div class="mb-3">
+                <label for="numarPersoane" class="form-label">Persoane</label>
+                <input type="number" min="1" max="20" placeholder="max 20 persoane" th:field="*{persons}"
+                       class="form-control" id="numarPersoane">
+                <div id="numarPersoaneHelp" class="form-text">Introdu numarul de oaspeti</div>
+            </div>
 
-    <form action="#" th:action="@{/addRoom}" method="post" th:object="${hotelReservation}">
-        <div class="mb-3">
-            <label for="dateIn" class="form-label">Data intrare</label>
-            <input type="date" th:field="*{dateIn}" class="form-control" id="dateIn">
-            <div id="dateInHelp" class="form-text">Alege ziua de check-in</div>
+
+
+
         </div>
-        <div class="mb-3">
-            <label for="dateOut" class="form-label">Data iesire</label>
-            <input type="date" th:field="*{dateOut}" class="form-control" id="dateOut">
-            <div id="dateOutHelp" class="form-text">Alege ziua de check-out</div>
+
+
+        <!--        <form action="#" th:action="@{/rez}" method="post" th:object="${hotelReservation}">-->
+        <div class="chooseRoom">
+            <div class="room1 border">
+                <img class="pictures" src="/img/penthouse.jpg">
+                <input th:field="*{rooms}" type="radio" id="penthouse" name="penthouse" value="penthouse">
+                <label for="penthouse"><p class="romName"> Penthouse</p></label><br>
+            </div>
+            <div class="room2 border">
+                <img class="pictures" src="/img/double.jpg">
+                <input th:field="*{rooms}" type="radio" id="double" name="penthouse" value="penthouse">
+                <label for="penthouse"><p class="romName"> Double</p></label><br>
+            </div>
+            <div class="room3 border">
+                <img class="pictures" src="/img/single.jpg">
+                <input th:field="*{rooms}" type="radio" id="single" name="penthouse" value="penthouse">
+                <label for="penthouse"><p class="romName"> Single</p></label><br>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="numarPersoane" class="form-label">Persoane</label>
-            <input type="number" th:field="*{persons}" class="form-control" id="numarPersoane">
-            <div id="numarPersoaneHelp" class="form-text">Introdu numarul de oaspeti</div>
-        </div>
-        <label for="exampleDataList" class="form-label">Camera</label>
-        <input th:field="*{rooms}" class="form-control" list="datalistOptions" id="exampleDataList"
-               placeholder="Alege camera...">
-        <datalist id="datalistOptions">
-            <option value="1">Single</option>
-            -->
-            <option value="2">Double</option>
-            -->
-            <option value="3">Penthouse</option>
-            -->
-        </datalist>
-        <button type="submit" class="btn btn-primary mb-3">Confirmare</button>
-    </form>
-
-    <!--<div class="card" style="width: 18rem;">-->
-    <!--    <img src="..." class="card-img-top" alt="...">-->
-    <!--    <div class="card-body">-->
-    <!--        <h5 class="card-title">Card title</h5>-->
-    <!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-    <!--    </div>-->
-
-    <!--    <form action="#" th:action="@{/addRoom}" method="post" th:object="${hotelReservation}">-->
-    <!--    <ul class="list-group list-group-flush">-->
-
-    <!--        <li class="list-group-item"><input type="date" th:field="*{date}" /></li>-->
-    <!--        <li class="list-group-item"><input type="number" th:field="*{persons}" /></li>-->
-    <!--        <li class="list-group-item" th:field="*{rooms}"><select class="form-select" aria-label="Default select example" >-->
-    <!--            <option selected>Alege camera</option>-->
-    <!--            <option value="1">Single</option>-->
-    <!--            <option value="2">Double</option>-->
-    <!--            <option value="3">Penthouse</option>-->
-    <!--        </select></li>-->
-    <!--        <p><input type="submit" value="Submit" /></p>-->
-    <!--    </ul>-->
-    <!--    </form>-->
-    <!--    <div class="card-body">-->
-    <!--        <a href="#" class="card-link">Card link</a>-->
-    <!--        <a href="#" class="card-link">Another link</a>-->
-    <!--    </div>-->
-    <!--</div>-->
+        <input type="submit" value="Submit">
 
 
-    <!--               <table class="table-primary">-->
-    <!--                   <thead>-->
-    <!--                   <tr>-->
-    <!--                       <th scope="col">Id</th>-->
-    <!--                       <th scope="col">Data</th>-->
-    <!--                       <th scope="col">Persoane</th>-->
-    <!--                       <th scope="col">Camera</th>-->
-    <!--                   </tr>-->
-    <!--                   </thead>-->
-    <!--                   <tbody>-->
-    <!--                   <tr>-->
-    <!--                       <th scope="row">1</th>-->
-    <!--                       <td><input type="date" th:field="*{date}" /></td>-->
-    <!--                       <td><input type="number" th:field="*{persons}" /></td>-->
-    <!--                       <td th:field="*{rooms}"><select class="form-select" aria-label="Default select example" >-->
-    <!--                           <option selected>Alege camera</option>-->
-    <!--                           <option value="1">Single</option>-->
-    <!--                           <option value="2">Double</option>-->
-    <!--                           <option value="3">Penthouse</option>-->
-    <!--                       </select></td>-->
-    <!--                   </tr>-->
-    <!--                   <tr>-->
-    <!--                       <th scope="row">2</th>-->
-    <!--                       <td><input type="date" th:field="*{date}" /></td>-->
-    <!--                       <td><input type="number" th:field="*{persons}" /></td>-->
-    <!--                       <td th:field="*{rooms}"><select class="form-select" aria-label="Default select example" >-->
-    <!--                       <option selected>Alege camera</option>-->
-    <!--                       <option value="1">Single</option>-->
-    <!--                       <option value="2">Double</option>-->
-    <!--                       <option value="3">Penthouse</option>-->
-    <!--                   </select></td>-->
-    <!--                   </tr>-->
-    <!--                   <tr>-->
-    <!--                       <th scope="row">3</th>-->
-    <!--                       <td><input type="date" th:field="*{date}" /></td>-->
-    <!--                       <td><input type="number" th:field="*{persons}" /></td>-->
-    <!--                       <td th:field="*{rooms}"><select class="form-select" aria-label="Default select example">-->
-    <!--                       <option selected>Alege camera</option>-->
-    <!--                       <option value="1">Single</option>-->
-    <!--                       <option value="2">Double</option>-->
-    <!--                       <option value="3">Penthouse</option>-->
-    <!--                   </select></td>-->
-    <!--                   </tr>-->
-    <!--                   </tbody>-->
-    <!--               </table>-->
-
-
-</div>
+    </div>
+</form>
 </body>
 
 </html>
