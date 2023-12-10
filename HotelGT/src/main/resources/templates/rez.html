@@ -11,30 +11,46 @@
 </head>
 <body class="rezHtml">
 <form action="#" th:action="@{/rez}" method="post" th:object="${hotelReservation}">
+    <div class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/about}">Hotel GT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/home}">Acasa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">Despre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
     <div class="reservationPage">
         <div class="formReservation">
-            <div class="mb-3">
+            <div class="mb-3 one">
                 <label for="dateIn" class="form-label">Data intrare</label>
                 <input type="date" th:field="*{dateIn}" class="form-control" id="dateIn">
                 <div id="dateInHelp" class="form-text">Alege ziua de check-in</div>
             </div>
-            <div class="mb-3">
-                <label for="dateOut" class="form-label">Data iesire</label>
+            <div class="mb-3 two">
+                <label for="dateOut" class="form-label">Data ieșire</label>
                 <input type="date" th:field="*{dateOut}" class="form-control" id="dateOut">
                 <div id="dateOutHelp" class="form-text">Alege ziua de check-out</div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 three">
                 <label for="numarPersoane" class="form-label">Persoane</label>
-                <input type="number" min="1" max="20" placeholder="max 20 persoane" th:field="*{persons}"
+                <input type="number" min="1" max="5" placeholder="max 5 persoane" th:field="*{persons}"
                        class="form-control" id="numarPersoane">
-                <div id="numarPersoaneHelp" class="form-text">Introdu numarul de oaspeti</div>
+                <div id="numarPersoaneHelp" class="form-text">Introdu numărul de oaspeți</div>
             </div>
 
-
-
-
         </div>
-
 
         <!--        <form action="#" th:action="@{/rez}" method="post" th:object="${hotelReservation}">-->
         <div class="chooseRoom">
@@ -45,16 +61,20 @@
             </div>
             <div class="room2 border">
                 <img class="pictures" src="/img/double.jpg">
-                <input th:field="*{rooms}" type="radio" id="double" name="penthouse" value="penthouse">
+                <input th:field="*{rooms}" type="radio" id="double" name="penthouse" value="double">
                 <label for="penthouse"><p class="romName"> Double</p></label><br>
             </div>
             <div class="room3 border">
                 <img class="pictures" src="/img/single.jpg">
-                <input th:field="*{rooms}" type="radio" id="single" name="penthouse" value="penthouse">
+                <input th:field="*{rooms}" type="radio" id="single" name="penthouse" value="single">
                 <label for="penthouse"><p class="romName"> Single</p></label><br>
             </div>
         </div>
-        <input type="submit" value="Submit">
+
+        <br>
+
+
+        <input class="btn btn-primary" type="submit" value="Submit">
 
 
     </div>

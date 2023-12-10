@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+
+
+    <title>hotelGT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body class="homeConfirmation">
+<div class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/home}">Hotel GT</a>
+        </div>
+    </nav>
+</div>
+<div class="prev">
+<h1>Aici poti vizualiza rezervarile</h1>
+<main class="mainConfirmation">
+
+    <table class="table table-bordered">
+
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data check-in</th>
+            <th scope="col">Data check-out</th>
+            <th scope="col">Numar persoane</th>
+            <th scope="col">Tipul camerei</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="HOTEL_RESERVATION :${rezervari}">
+            <th th:text="${HOTEL_RESERVATION.id}" scope="row"></th>
+            <td th:text="${HOTEL_RESERVATION.dateIn}"></td>
+            <td th:text="${HOTEL_RESERVATION.dateOut}"></td>
+            <td th:text="${HOTEL_RESERVATION.persons}"></td>
+            <td th:text="${HOTEL_RESERVATION.rooms}"></td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</main>
+<a style=" margin-left: 20px" th:href="@{/rez}"><input class="btn btn-primary" type="submit" value="Adauga rezervare"></a>
+</div>
+</body>
+
+</html>
