@@ -14,6 +14,7 @@ import java.util.Set;
 
 @Controller
 public class ReservationController {
+
     @Autowired
     HotelReservationRepository resRepo;
 
@@ -28,14 +29,12 @@ public class ReservationController {
         resRepo.save(hotelReservation);
         return "redirect:/thanks";
     }
-    //@GetMapping("/confirmation")
-    //public String confirmation( Model model) {
-      //  model.addAttribute("confirmation", model);
-       // return "confirmation";
-   // }
+
     @GetMapping("/confirmation")
     public String guests(Model model){
         model.addAttribute("rezervari", resRepo.findAll());
         return "confirmation";
     }
+
+
 }

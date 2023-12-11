@@ -72,7 +72,6 @@ nav {
 .reservationPage{
     display: flex;
     flex-direction: column;
-
     padding: 10px;
     align-items: center;
     align-content: center;
@@ -84,7 +83,7 @@ nav {
     align-content: center;
     max-width: fit-content;
     justify-content: space-around;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 .pictures {

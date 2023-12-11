@@ -18,9 +18,9 @@
     </nav>
 </div>
 <div class="prev">
-<h1>Aici poti vizualiza rezervarile</h1>
-<main class="mainConfirmation">
 
+<main class="mainConfirmation" style="margin:0 auto; max-width: 900px">
+    <h1>Aici poti vizualiza rezervarile</h1>
     <table class="table table-bordered">
 
         <thead>
@@ -43,9 +43,10 @@
         </tbody>
 
     </table>
-
+    <a style=" margin-left: 20px" th:href="@{/rez}"><input class="btn btn-primary" type="submit" value="Adauga rezervare"></a>
+    <a style=" margin-left: 20px" th:href="@{/logout}"><input class="btn btn-primary" type="submit" value="Delogare"></a>
 </main>
-<a style=" margin-left: 20px" th:href="@{/rez}"><input class="btn btn-primary" type="submit" value="Adauga rezervare"></a>
+
 </div>
 </body>
 

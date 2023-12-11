@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PresentationController {
 
+    @GetMapping("/")
+    public String root(){
+        return "redirect:/home";
+    }
 
     @GetMapping("/home")
     public String home(@RequestParam(name = "welcomePage", defaultValue = "", required = false) String welcome,
@@ -26,7 +30,10 @@ public class PresentationController {
         return "thanks";
     }
 
-
+    @GetMapping("/homeGT")
+    public String homeGT(){
+        return "homeGT";
+    }
 
 
 }
