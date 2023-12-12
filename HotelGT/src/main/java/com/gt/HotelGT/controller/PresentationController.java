@@ -1,6 +1,6 @@
 package com.gt.HotelGT.controller;
 
-import com.gt.HotelGT.about.About;
+import com.gt.HotelGT.model.About;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

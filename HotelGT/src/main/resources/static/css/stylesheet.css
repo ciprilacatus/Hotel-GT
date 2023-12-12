@@ -1,6 +1,7 @@
-body{
+body {
     margin: 0;
 }
+
 .home {
     text-align: center;
     background-image: url('../img/homeCard.jpg');
@@ -10,6 +11,7 @@ body{
 
 
 }
+
 .homeTitleDiv {
     margin-top: 10%;
     display: flex;
@@ -17,32 +19,27 @@ body{
     align-items: center;
     place-items: center;
 }
+
 .homeConfirmation {
 
     background-image: url('../img/homeCard.jpg');
     background-size: cover;
-    background-color: white;
+    background-color: darkmagenta;
     background-blend-mode: soft-light;
 }
 
 .mainConfirmation {
     margin: 25px;
     width: 800px;
-
-    /*margin-top: 120px;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*margin-left: 60px;*/
-    /*margin-right: 60px;*/
 }
+
 .homeTitle {
     color: antiquewhite;
 }
+
 nav {
     color: whitesmoke;
 }
-/*rez page*/
 
 
 .rezHtml {
@@ -51,31 +48,36 @@ nav {
     background-color: lightblue;
     background-blend-mode: screen;
 }
+
 .homeConfirmation {
     background-image: url('../img/homeCard.jpg');
     background-size: cover;
     background-color: lightblue;
     background-blend-mode: screen;
 }
-.aboutHtml{
+
+.aboutHtml {
     background-image: url('../img/homeCard.jpg');
     background-size: cover;
     background-color: lightblue;
     background-blend-mode: screen;
 }
+
 .thanksHtml {
     background-image: url('../img/homeCard.jpg');
     background-size: cover;
     background-color: lightblue;
     background-blend-mode: screen;
 }
-.reservationPage{
+
+.reservationPage {
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
     align-content: center;
- }
+}
+
 .formReservation {
     display: flex;
     flex-direction: row;
@@ -88,25 +90,28 @@ nav {
 
 .pictures {
     box-shadow: 5px 10px 8px grey;
-    margin:5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
     border-radius: 10px;
     display: flex;
     max-width: 300px;
     max-height: 300px;
 }
+
 .chooseRoom {
     display: flex;
     flex-direction: row;
     max-width: fit-content;
     margin-top: 80px;
 }
+
 .room1 {
-    border: aliceblue ;
+    border: aliceblue;
     border-radius: 10px;
     border-style: solid;
     margin-bottom: 10px;
 
 }
+
 .border {
     box-shadow: 5px 10px 8px grey;
     background-color: lightgray;
@@ -114,6 +119,7 @@ nav {
     margin: 10px;
 
 }
+
 .romName {
     color: whitesmoke;
     font-weight: bold;
@@ -121,20 +127,25 @@ nav {
     font-variant: small-caps;
     text-shadow: 2px 2px 5px black;
 }
+
 #double {
 
     margin-left: 100px;
 }
-#penthouse{
+
+#penthouse {
     margin-left: 100px;
 }
+
 #single {
     margin-left: 100px;
 }
+
 .navbar {
     background-color: black;
     box-shadow: 2px 2px 40px 2px black;
- }
+}
+
 .mb-3 {
     margin: 20px;
 }
@@ -148,6 +159,7 @@ nav {
     vertical-align: middle;
 
 }
+
 .prev {
     margin: 40px;
 }

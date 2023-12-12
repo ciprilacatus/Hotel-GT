@@ -1,6 +1,6 @@
-package com.gt.HotelGT.controller;
+package com.gt.HotelGT.service;
 
-import com.gt.HotelGT.service.HotelReservation;
+import com.gt.HotelGT.model.HotelReservation;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 

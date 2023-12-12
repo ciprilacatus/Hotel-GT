@@ -1,4 +1,4 @@
-package com.gt.HotelGT.service;
+package com.gt.HotelGT.model;
 
 import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;

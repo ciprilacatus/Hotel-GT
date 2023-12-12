@@ -15,6 +15,7 @@
 <div th:if="${param.logout}">
     Ai fost delogat.
 </div>
+<div style="margin-top: 200px">
 <form action="#" th:action="@{/login}" method="post">
     <div class="mb-3">
         <label for="username" class="form-label">Utilizator (Utilizator : gt)</label>
@@ -27,5 +28,6 @@
 
     <button style="margin-left: 20px" type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 </body>
 </html>

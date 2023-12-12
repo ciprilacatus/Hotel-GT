@@ -1,7 +1,7 @@
 package com.gt.HotelGT.controller;
 
 import com.gt.HotelGT.repository.HotelReservationRepository;
-import com.gt.HotelGT.service.HotelReservation;
+import com.gt.HotelGT.model.HotelReservation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.util.Set;
 
 @Controller
 public class ReservationController {
