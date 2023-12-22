@@ -69,4 +69,5 @@ public class HotelReservation implements Serializable {
     public void setRooms(String rooms) {
         this.rooms = rooms;
     }
+
 }
